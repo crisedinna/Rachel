@@ -90,6 +90,10 @@ public class MainActivity extends Activity {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setDomStorageEnabled(true); // 学习记录使用 localStorage
         webView.getSettings().setDatabaseEnabled(true);
+        webView.getSettings().setUseWideViewPort(true);
+        webView.getSettings().setLoadWithOverviewMode(false);
+        webView.getSettings().setTextZoom(100);
+        webView.getSettings().setSupportZoom(false);
         webView.setOverScrollMode(View.OVER_SCROLL_NEVER);
         webView.addJavascriptInterface(new BackupBridge(), "AndroidBridge");
         webView.setWebChromeClient(new WebChromeClient() {
